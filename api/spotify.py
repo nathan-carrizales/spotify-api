@@ -274,7 +274,7 @@ if __name__ == '__main__':
     spotify_client = SpotifyClient(
         client_id=SPOTIFY_CLIENT_ID,
         client_secret=SPOTIFY_CLIENT_SECRET,
-        token='BQA4jJVAsccS_5bZXChMeZOOWwN2O0aeIwy6zbYu26d_VErZpi7Gq6J2KE4r4VYQkxipNRwX38pGxTH-5PnB23cWEIasQ9EG6PA_JiN9AolrtJpCucw4b_RsIf1M7t4RHHa0pTRy009HYv1Wf23BCvkEvyENShW2ZJzCwxEfLAT3JC--7G3-bvKmvMpUaNhyN-sqw4xtpds9NH8RewA'
+        token=''
 
     )
 
