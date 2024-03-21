@@ -93,7 +93,7 @@ if __name__ == '__main__':
 
     start_date = '2024-04-21'
     end_date = '2024-05-01'
-    ticketmaster_location_id = 607  # https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
+    ticketmaster_location_id = 701  # https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
     tracks_per_artist = 4
 
     artists = TicketmasterClient(token=TICKETMASTER_TOKEN).get_music_events(
