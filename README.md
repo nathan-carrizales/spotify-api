@@ -26,19 +26,15 @@ To use the Spotify API, users must have a Spotify account and the following:
 3. Client secret
 4. Access token
 
-## Environment variables
+### Client ID and Client secret
+To create the client ID and secret, users must create a Spotify "App". Steps:
+1. Visit https://developer.spotify.com/dashboard 
+2. Select "Create App"
+3. After creating app, select it on the dashboard
+4. Select "Settings"
+5. Copy the client ID and client secret
 
-`SPOTIFY_CLIENT_ID` - Client ID associated with a developer App
-
-`SPOTIFY_CLIENT_SECRET` - Client secret associated with a developer App
-
-`SPOTIFY_USER_ID` - User ID when logging into Spotify
-
-`SPOTIFY_TOKEN` - Token for API calls, issued only through running "app_for_getting_spotify_token.py"
-
-`TICKETMASTER_CONSUMER_KEY` Consumer key associated with a Tickermaster developer App
-
-## Generating a Spotify API token
+### Access token
 
 Spotify API tokens only last for one hour, and can only be issued by local authentication by running 
 `app_for_getting_spotify_token.py`. To begin, first start by whitelisting the "Redirect URI".
@@ -55,3 +51,17 @@ To generate the token:
 2. Using any browser, navigate to the URL "http://127.0.0.1:8888/login"
 3. Follow the instructions and enter the user ID and password for Spotify authentication.
 4. Upon signing in, a HTML page should show the token, scope, and expiration. Copy and paste the token to the variable `SPOTIFY_TOKEN` in the project_secrets.py  
+
+
+## Environment variables
+
+`SPOTIFY_CLIENT_ID` - Client ID associated with a developer App
+
+`SPOTIFY_CLIENT_SECRET` - Client secret associated with a developer App
+
+`SPOTIFY_USER_ID` - User ID when logging into Spotify
+
+`SPOTIFY_TOKEN` - Token for API calls, issued only through running "app_for_getting_spotify_token.py"
+
+`TICKETMASTER_CONSUMER_KEY` Consumer key associated with a Tickermaster developer App
+
