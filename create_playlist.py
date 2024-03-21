@@ -88,15 +88,15 @@ def suggest_spotify_playlist_name(location_id: int, start: str, end: str) -> str
 
 
 if __name__ == '__main__':
-    from project_secrets import TICKETMASTER_TOKEN, SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFY_USER_ID,\
+    from project_secrets import TICKETMASTER_CONSUMER_KEY, SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFY_USER_ID,\
         SPOTIFY_TOKEN
 
     start_date = '2024-04-21'
-    end_date = '2024-05-01'
-    ticketmaster_location_id = 701  # https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
-    tracks_per_artist = 4
+    end_date = '2024-06-30'
+    ticketmaster_location_id = 602  # https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/
+    tracks_per_artist = 3
 
-    artists = TicketmasterClient(token=TICKETMASTER_TOKEN).get_music_events(
+    artists = TicketmasterClient(token=TICKETMASTER_CONSUMER_KEY).get_music_events(
         start=start_date,
         end=end_date,
         location_id=ticketmaster_location_id,
