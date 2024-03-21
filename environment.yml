@@ -1,0 +1,8 @@
+name: spotify-api
+channels:
+  - defaults
+dependencies:
+  - pip=22.2.2
+  - python=3.9.13
+  - flask=2.2.2
+  - numpy=1.23.3
