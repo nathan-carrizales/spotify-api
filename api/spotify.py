@@ -150,9 +150,9 @@ class SpotifyClient:
 
         if search_results is None:
             return None
-
+        elif len(search_results) == 0:
+            return None
         else:
-
             # map the initial query to the name of the artist
             spotify_artist_id = None
             match_found = False
