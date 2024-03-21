@@ -168,7 +168,7 @@ class SpotifyClient:
                     print(f'found artist "{artist_name}"!')
 
                 if (counter == number_of_attempts) & (not match_found):
-                    print(f'could not find artist {artist_name}')
+                    print(f'could not find artist "{artist_name}"')
                     return None
 
                 else:
@@ -217,22 +217,24 @@ class SpotifyClient:
 
         if episodes_results:
 
-            number_of_tracks = min(
-                [
-                    len(episodes_results['episodes']['items']),
-                    n_tracks
+            if len(episodes_results['episodes']['items']) > 0:
+
+                number_of_tracks = min(
+                    [
+                        len(episodes_results['episodes']['items']),
+                        n_tracks
+                    ]
+                )
+
+                episode_id = [
+                    f"spotify:episode:{episodes_results['episodes']['items'][i]['id']}" for i in np.arange(number_of_tracks)
                 ]
-            )
 
-            episode_id = [
-                f"spotify:episode:{episodes_results['episodes']['items'][i]['id']}" for i in np.arange(number_of_tracks)
-            ]
-
-            response = self.add_entity_to_playlist(
-                entity_ids=episode_id,
-                playlist_id=playlist_id
-            )
-            return response
+                response = self.add_entity_to_playlist(
+                    entity_ids=episode_id,
+                    playlist_id=playlist_id
+                )
+                return response
 
         else:
             return None
