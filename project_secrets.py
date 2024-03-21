@@ -16,4 +16,4 @@ SPOTIFY_USER_ID = environ.get('SPOTIFY_USER_ID')
 SPOTIFY_TOKEN = ''
 
 # Ticketmaster token for accessing its API
-TICKETMASTER_TOKEN = environ.get('TICKETMASTER_TOKEN')
+TICKETMASTER_CONSUMER_KEY = environ.get('TICKETMASTER_CONSUMER_KEY')
