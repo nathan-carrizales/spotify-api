@@ -2,6 +2,14 @@
 
 This project aims at enabling users to use the Spotify and Ticketmaster API to dynamically create playlists.
 
+## Create Spotify Playlist using Ticketmaster and Spotify API
+
+The script `create_playlist.py` allows to create a Spotify playlist based  off of artists coming to an area
+according to Ticketmaster. Users can pick the start and end date, location ID, and number of songs for each artist.
+
+The default behavior adds the top 3 songs of each artist as well as one podcast episode featuring them.
+To use the script, users must have access to the Ticketmaster and Spotify API.
+
 ## Ticketmaster API
 
 To use the Ticketmaster API, users must have a token called the client "Consumer Key". To create a consumer key, the
