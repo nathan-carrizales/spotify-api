@@ -6,6 +6,10 @@ from api.spotify import SpotifyClient
 from api.ticketmaster import TicketmasterClient
 import pandas as pd
 
+import logging
+logging.basicConfig()
+logging.getLogger().setLevel(logging.INFO)
+
 
 def create_spotify_playlist(
         user_id: str,
