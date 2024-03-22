@@ -2,9 +2,13 @@
 Spotify Client API for making requests
 """
 import numpy as np
+import logging
 import json
 from api.utility import _make_request
 from typing import Dict
+
+
+logger = logging.getLogger(__name__)
 
 
 class SpotifyClient:
@@ -165,10 +169,11 @@ class SpotifyClient:
                 if artist_name == ith_artist["name"]:
                     match_found = True
                     spotify_artist_id = ith_artist['id']
-                    print(f'found artist "{artist_name}"!')
+
+                    logger.info(f'{artist_name} -> {ith_artist["name"]} -> {ith_artist["id"]}')
 
                 if (counter == number_of_attempts) & (not match_found):
-                    print(f'could not find artist "{artist_name}"')
+                    logger.info(f'{artist_name} -> None -> None')
                     return None
 
                 else:
